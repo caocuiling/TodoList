@@ -1,0 +1,128 @@
+{
+   "addSave": {
+      "message": "add, save a task"
+   },
+   "addTask": {
+      "message": "Add"
+   },
+   "allDataIsDeleted": {
+      "message": "All data is deleted"
+   },
+   "areYouSure": {
+      "message": "Are you sure?"
+   },
+   "browsersContextMenu": {
+      "message": "Browser's context menu"
+   },
+   "browsersContextMenuRestart": {
+      "message": "After changing this option you must restart the extension."
+   },
+   "clearAllData": {
+      "message": "Clear All Data"
+   },
+   "clearNote": {
+      "message": "The database and all settings of the extension will be deleted!"
+   },
+   "clickToDownload": {
+      "message": "Click to download data as file"
+   },
+   "confirmImportNote": {
+      "message": "All current data will be overwritten!"
+   },
+   "couldNotBeImported": {
+      "message": "The data could not be imported due to wrong format"
+   },
+   "dataImportedSuccessfully": {
+      "message": "Data imported successfully"
+   },
+   "delete": {
+      "message": "Delete"
+   },
+   "deleteCompleted": {
+      "message": "Delete completed tasks"
+   },
+   "edit": {
+      "message": "Edit"
+   },
+   "exportData": {
+      "message": "Export Data"
+   },
+   "exportNote": {
+      "message": "Use this code to import data (options and tasks) into another browser."
+   },
+   "extensionDescription": {
+      "message": "Simple and minimalistic extension for task management."
+   },
+   "extensionName": {
+      "message": "Simple To-Do List"
+   },
+   "hotkeys": {
+      "message": "Hotkeys:"
+   },
+   "importData": {
+      "message": "Import Data"
+   },
+   "importData2": {
+      "message": "Import Data"
+   },
+   "importExport": {
+      "message": "Import/Export"
+   },
+   "importNote": {
+      "message": "Here you can import the data (options and tasks), exported from another browser."
+   },
+   "locale": {
+      "message": "en"
+   },
+   "newLine": {
+      "message": "new line"
+   },
+   "newTask": {
+      "message": "Type a new task..."
+   },
+   "no": {
+      "message": "No"
+   },
+   "ok": {
+      "message": "Ok"
+   },
+   "options": {
+      "message": "Options"
+   },
+   "optionsTitle": {
+      "message": "Options"
+   },
+   "priority": {
+      "message": "Priority:"
+   },
+   "priority1color": {
+      "message": "Color for a task with priority 1:"
+   },
+   "priority2color": {
+      "message": "Color for a task with priority 2:"
+   },
+   "priority3color": {
+      "message": "Color for a task with priority 3:"
+   },
+   "restoreDefaults": {
+      "message": "Restore Defaults"
+   },
+   "save": {
+      "message": "Save"
+   },
+   "saveAsTask": {
+      "message": "Save as task"
+   },
+   "saveOptions": {
+      "message": "Save Options"
+   },
+   "taskFontCSS": {
+      "message": "CSS for the task font:"
+   },
+   "versionHistory": {
+      "message": "Version History"
+   },
+   "yes": {
+      "message": "Yes"
+   }
+}

@@ -1,0 +1,128 @@
+{
+   "addSave": {
+      "message": "добавить, сохранить задачу"
+   },
+   "addTask": {
+      "message": "Добавить"
+   },
+   "allDataIsDeleted": {
+      "message": "Все данные удалены"
+   },
+   "areYouSure": {
+      "message": "Вы уверены?"
+   },
+   "browsersContextMenu": {
+      "message": "Контекстное меню браузера"
+   },
+   "browsersContextMenuRestart": {
+      "message": "После изменения данной опции необходимо перезапустить расширение."
+   },
+   "clearAllData": {
+      "message": "Удалить все данные"
+   },
+   "clearNote": {
+      "message": "База данных расширения и все настройки будут удалены!"
+   },
+   "clickToDownload": {
+      "message": "Кликните, чтобы сохранить данные в виде файла"
+   },
+   "confirmImportNote": {
+      "message": "Все имеющиеся данные будут заменены!"
+   },
+   "couldNotBeImported": {
+      "message": "Указанные данные не могут быть импортированы из-за неправильного формата"
+   },
+   "dataImportedSuccessfully": {
+      "message": "Данные успешно импортированы"
+   },
+   "delete": {
+      "message": "Удалить"
+   },
+   "deleteCompleted": {
+      "message": "Удалить выполненные задачи"
+   },
+   "edit": {
+      "message": "Редактировать"
+   },
+   "exportData": {
+      "message": "Экспорт данных"
+   },
+   "exportNote": {
+      "message": "Используйте данный код, чтобы импортировать настройки и список задач в другой браузер."
+   },
+   "extensionDescription": {
+      "message": "Минималистичное расширение для управления задачами."
+   },
+   "extensionName": {
+      "message": "Simple To-Do List"
+   },
+   "hotkeys": {
+      "message": "Горячие клавиши:"
+   },
+   "importData": {
+      "message": "Импорт данных"
+   },
+   "importData2": {
+      "message": "Импортировать"
+   },
+   "importExport": {
+      "message": "Импорт/Экспорт"
+   },
+   "importNote": {
+      "message": "Здесь вы можете импортировать данные (настройки и список задач), экспортированных из другого браузера."
+   },
+   "locale": {
+      "message": "ru"
+   },
+   "newLine": {
+      "message": "новая строка"
+   },
+   "newTask": {
+      "message": "Введите новую задачу..."
+   },
+   "no": {
+      "message": "Нет"
+   },
+   "ok": {
+      "message": "Ok"
+   },
+   "options": {
+      "message": "Настройки"
+   },
+   "optionsTitle": {
+      "message": "Настройки"
+   },
+   "priority": {
+      "message": "Приоритет:"
+   },
+   "priority1color": {
+      "message": "Цвет задачи с приоритетом 1:"
+   },
+   "priority2color": {
+      "message": "Цвет задачи с приоритетом 2:"
+   },
+   "priority3color": {
+      "message": "Цвет задачи с приоритетом 3:"
+   },
+   "restoreDefaults": {
+      "message": "Сбросить настройки"
+   },
+   "save": {
+      "message": "Сохранить"
+   },
+   "saveAsTask": {
+      "message": "Сохранить как задачу"
+   },
+   "saveOptions": {
+      "message": "Сохранить настройки"
+   },
+   "taskFontCSS": {
+      "message": "CSS-код для текста задачи:"
+   },
+   "versionHistory": {
+      "message": "История изменений"
+   },
+   "yes": {
+      "message": "Да"
+   }
+}
