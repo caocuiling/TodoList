@@ -117,18 +117,18 @@ $(function() {
 								'<div class="task">' + divTask + '</div>' +
 								'<textarea class="editable">' + task + '</textarea>' +
 								'<div class="checkbox"></div>' +
-								'<div class="edit" title="Edit" data-i18n-title="edit"></div>' +
+								'<div class="edit" title="编辑"></div>' +
 								'<div class="action"></div>' +
 								'<div class="drag"></div>' +
 								'<div class="menu">' +
-									'<div class="priority" data-i18n="priority">Priority:</div>' +
+									'<div class="priority">优先级:</div>' +
 									'<div class="pr' + active1 + '" data-index="1">1</div>' +
 									'<div class="pr' + active2 + '" data-index="2">2</div>' +
 									'<div class="pr' + active3 + '" data-index="3">3</div>' +
 									'<div class="pr' + active0 + '" data-index="0">0</div>' +
-									'<div class="delete" data-i18n="delete">Delete</div>' +
+									'<div class="delete">删除</div>' +
 								'</div>' +
-								'<div class="save" title="Save" data-i18n-title="save"></div>' +
+								'<div class="save" title="保存"></div>' +
 							'</li>';
 		}
 		$('ul').append(tasks);
@@ -179,25 +179,11 @@ $(function() {
 			if (isChrome) syncData();
 		}, 500);
 
-		$('body *').each(function() {
-			translation($(this));
-		});
+		
 	}
 
 	// translation
-	var translation = function(element) {
-		var el = element;
-		if ( el.attr('data-i18n') ) {
-			el.text( chrome.i18n.getMessage( el.attr('data-i18n') ) );
-		}
-		if ( el.attr('data-i18n-title') ) {
-			el.attr('title', chrome.i18n.getMessage( el.attr('data-i18n-title') ) );
-		}
-		if ( el.attr('placeholder') ) {
-			el.text('');
-			el.attr('placeholder', chrome.i18n.getMessage( el.attr('data-i18n') ) );
-		}
-	};
+	
 
 	function badge() {
 		chrome.browserAction.setBadgeText({ text: '' + $('li:not(.completed)').length + '' });
