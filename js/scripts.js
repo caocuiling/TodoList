@@ -118,7 +118,7 @@ $(function() {
 								'<textarea class="editable">' + task + '</textarea>' +
 								'<div class="checkbox"></div>' +
 								'<div class="edit" title="编辑"></div>' +
-								'<div class="action"></div>' +
+								'<div class="action" title="操作"></div>' +
 								'<div class="drag"></div>' +
 								'<div class="menu">' +
 									'<div class="priority">优先级:</div>' +

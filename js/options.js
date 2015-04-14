@@ -36,7 +36,7 @@ $(function() {
 		json.syncData = $.parseJSON(JSON.stringify(localStorage));
 		chrome.storage.sync.set(json);
 	}
-
+    //save the options
 	function updateOptions() {
 		localStorage.options = '{' +
 			'"task_css": "' + encodeURIComponent($('#task-css').val()) + '",' +
@@ -48,7 +48,7 @@ $(function() {
 		'}';
 		if (isChrome) syncData();
 	}
-
+    //save the options of default
 	function defaultOptions(defaults) {
 		$('input:text').each(function() {
 			$(this).val( $(this).data('default') );
@@ -91,7 +91,7 @@ $(function() {
 		});
 	}
 
-	// checkboxes
+	// checkboxes   Browser's context menu
 	$('div.checkbox').click(function() {
 		if ( $(this).is('.checked') ) {
 			$(this).removeClass('checked');
@@ -102,7 +102,7 @@ $(function() {
 		}
 	});
 
-	// save options
+	//  button save options
 	$('#save').click(function() {
 		$(this).addClass('active');
 		setTimeout( function() { $('#save').removeClass('active'); }, 800 );
@@ -131,17 +131,6 @@ $(function() {
 	});
 
 	// translation
-	$('body *').each(function() {
-		if ( $(this).attr('data-i18n') ) {
-			$(this).text( chrome.i18n.getMessage( $(this).attr('data-i18n') ) );
-		}
-		if ( $(this).attr('data-i18n-title') ) {
-			$(this).attr('title', chrome.i18n.getMessage( $(this).attr('data-i18n-title') ) );
-		}
-		if (chrome.i18n.getMessage('@@ui_locale') == 'ru') {
-			$('#developer-url').attr('href', 'http://dimox.name/');
-		}
-	});
 
 	var labelWidth = 0;
 	var label = $('div.option label');
