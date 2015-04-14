@@ -132,5 +132,77 @@ $(function() {
 
 	// translation
 
+	var labelWidth = 0;
+	var label = $('div.option label');
+	label.each(function() {
+		if ( $(this).width() > labelWidth ) labelWidth = $(this).width();
+	}).width(labelWidth);
+
+	$('body').prepend('<div id="overlay"></div>');
+
+	$('#import-button').click(function() {
+		$('#overlay, #confirm-import').addClass('visible');
+	});
+
+	// import data
+	$('#import-yes').on('click', function() {
+		$('#confirm-import').removeClass('visible');
+		var data = $('#import').val();
+		$('#done div.modal__headline').hide();
+		$('#done').addClass('visible');
+
+		// check for correct JSON
+		var IS_JSON = true;
+		try {
+			data = $.parseJSON(data);
+		} catch(err) {
+			IS_JSON = false;
+		}
+		if (IS_JSON) {
+			localStorage.clear();
+			for (var key in data) {
+				localStorage[key] = JSON.stringify(data[key]);
+			}
+			$('#data-imported-successfully').show();
+		} else {
+			$('#could-not-be-imported').show();
+		}
+
+		if (isChrome) syncData();
+
+		$('#import').val('');
+		$('#export').val( lStorage() );
+		badge();
+		exportAsFile();
+	});
+
+	$('#clear-button').click(function() {
+		$('#overlay, #confirm-clear').addClass('visible');
+	});
+
+	// clear data
+	$('#clear-yes').on('click', function() {
+		$('#confirm-clear').removeClass('visible');
+		$('#done').addClass('visible');
+		$('#done div.modal__headline').hide();
+		$('#all-data-is-deleted').show();
+		localStorage.clear();
+		if (isChrome) syncData();
+		$('#export').val( lStorage() );
+		badge();
+	});
+
+	$('#overlay, #import-no, #clear-no, #ok').on('click', function() {
+		$('#overlay, div.modal').removeClass('visible');
+	});
+
+	// export data
+	$('#export').val( lStorage() ).click(function() {
+		$(this).select();
+	});
+
+	// export data as file
+	exportAsFile();
+
 });
 })(jQuery);
