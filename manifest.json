@@ -9,10 +9,7 @@
    },
    "default_locale": "en",
    "description": "__MSG_extensionDescription__",
-   "developer": {
-      "name": "Dimox",
-      "url": "http://dimox.net"
-   },
+ 
    "icons": {
       "128": "icon-128.png",
       "16": "icon-16.png",
