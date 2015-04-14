@@ -5,14 +5,10 @@
    "browser_action": {
       "default_icon": "icon.png",
       "default_popup": "index.html",
-      "default_title": "__MSG_extensionName__"
+      "default_title": "个人任务管理器"
    },
    "default_locale": "en",
    "description": "__MSG_extensionDescription__",
-   "developer": {
-      "name": "Dimox",
-      "url": "http://dimox.net"
-   },
    "icons": {
       "128": "icon-128.png",
       "16": "icon-16.png",
@@ -20,9 +16,8 @@
    },
    "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCC17NyFuC4CDGYoRqJyQc0POKqP0memqlhvQ8CBCxf/I+QAvEsfSgSSIrTUlogzoat4aoQ+U/ofhNNAZGdiOlprEQ/r1SYKvkprDE0i2vXWvt7M4bejhdazr9XkDxaWqRHfVktPY+hhjFOV84wtOJ51HIXTmohVokZBOKDkOrdeQIDAQAB",
    "manifest_version": 2,
-   "name": "__MSG_extensionName__",
+   "name": "任务管理器",
    "options_page": "options.html",
    "permissions": [ "contextMenus", "storage" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.3.3.1"
+   "version": "1.0"
 }
