@@ -1,3 +1,6 @@
+	/** 
+	输出任务  
+	*/
 (function($) {
 $(function() {
 
@@ -19,7 +22,7 @@ $(function() {
 		(navigator.userAgent.match(/Chrome/i)) &&
 		!(navigator.userAgent.match(/OPR/i)) &&
 		!(navigator.userAgent.match(/YaBrowser/i))
-	) isChrome = true;
+	) isChrome = true
 
 	if (isChrome) {
 		function getSyncData() {
@@ -89,7 +92,7 @@ $(function() {
 		outputTasks();
 	}
 
-	// output tasks
+
 	function outputTasks(newItem) {
 		$('ul').empty();
 		var tasks = '';
@@ -182,7 +185,9 @@ $(function() {
 		
 	}
 
-	// translation
+	/** 
+	翻译  
+	*/
 	
 
 	function badge() {
@@ -193,7 +198,9 @@ $(function() {
 	outputTasks();
 	badge();
 
-	// mark/unmark all tasks as completed
+	/** 
+	标记/取消标记为已完成所有任务  
+	*/
 	$('div.check-all').click(function() {
 		if ( $(this).is('.checked') ) {
 			$(this).removeClass('checked');
@@ -212,7 +219,7 @@ $(function() {
 		badge();
 	});
 
-	// delete all completed
+	/** 删除所有完成  */
 	$('div.del-completed').click(function() {
 		var liCount = $('li').length;
 		var complCount = $('li.completed').length;
@@ -230,7 +237,7 @@ $(function() {
 	});
 
 	$('ul')
-	// mark/unmark task as completed
+	/** 标记/取消标记任务标记为完成  */
 	.on('click', 'div.checkbox', function() {
 		$('div.check-all').removeClass('checked');
 		var li = $(this).closest('li');
@@ -248,7 +255,7 @@ $(function() {
 		}
 		badge();
 	})
-	// show menu
+	/** 显示菜单  */
 	.on('click', 'div.action', function() {
 		$(this).closest('li').siblings().find('div.menu').hide();
 		var menu = $(this).siblings('div.menu');
@@ -258,7 +265,7 @@ $(function() {
 			menu.show();
 		}
 	})
-	// make task editable
+	/** 使任务可编辑  */
 	.on('click', 'div.edit', function() {
 		var li = $(this).closest('li');
 		li.find('div.task').hide();
@@ -269,15 +276,15 @@ $(function() {
 		li.find('div.menu').hide();
 		li.find('div.edit, div.action').css('right', -50);
 	})
-	// save task on blur
+	/**保存任务  */
 	.on('blur', 'textarea.editable', function() {
 		saveTask( $(this) );
 	})
-	// save task on 'Save' button click
+	/** 在“保存”按钮点击保存任务  */
 	.on('click', 'div.save', function() {
 		saveTask( $(this).parent().find('textarea.editable') );
 	})
-	// save task
+	/** 保存任务  */
 	.on('keydown', 'textarea.editable', function(e) {
 		var options = $.parseJSON(localStorage.options);
 		if (!options.hotkeys || options.hotkeys == '0') {
@@ -297,12 +304,12 @@ $(function() {
 			}
 		}
 	})
-	// textarea auto resize
+	/** 文本区自动调整  */
 	.on('keyup', 'textarea.editable', function(e) {
 		$(this).height(0);
 		$(this).height(this.scrollHeight - 3);
 	})
-	// delete task
+	/** 删除任务  */
 	.on('click', 'div.delete', function() {
 		$(this).closest('li').remove();
 		localStorage.removeItem('task_' + $('li').length);
@@ -312,7 +319,7 @@ $(function() {
 		badge();
 		outputTasks();
 	})
-	// change task priority
+	/** 改变任务优先级  */
 	.on('click', 'div.pr', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 		$(this).closest('li').data('priority', $(this).data('index'));
@@ -321,12 +328,12 @@ $(function() {
 		});
 		outputTasks();
 	})
-	// click on a link
+	/** 点击一个链接  */
 	.on('click', 'a', function() {
 		chrome.tabs.create({'url': $(this).attr('href')});
 	});
 
-	// textarea auto resize
+	/** 文本区自动调整  */
 	function textareaResize() {
 		var ta = $('#new-task');
 		ta.css('height', '16px');
@@ -341,7 +348,7 @@ $(function() {
 	.on('cut paste drop keydown', function() {
 		delayedResize();
 	})
-	// new task hotkeys
+	/** 新任务热键  */
 	.keydown(function(e) {
 		var options = $.parseJSON(localStorage.options);
 		if (!options.hotkeys || options.hotkeys == '0') {
@@ -363,7 +370,7 @@ $(function() {
 		}
 	});
 
-	// add new task
+	/** 新任务热键  */
 	$('#submit').click(function() {
 		var task = $('#new-task').val();
 		if (task !== '') {

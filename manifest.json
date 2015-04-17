@@ -16,7 +16,7 @@
    },
    "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCC17NyFuC4CDGYoRqJyQc0POKqP0memqlhvQ8CBCxf/I+QAvEsfSgSSIrTUlogzoat4aoQ+U/ofhNNAZGdiOlprEQ/r1SYKvkprDE0i2vXWvt7M4bejhdazr9XkDxaWqRHfVktPY+hhjFOV84wtOJ51HIXTmohVokZBOKDkOrdeQIDAQAB",
    "manifest_version": 2,
-   "name": "任务管理器",
+   "name": "个人任务管理器",
    "options_page": "options.html",
    "permissions": [ "contextMenus", "storage" ],
    "version": "1.0"
