@@ -29,11 +29,16 @@ body {
 #options:hover {
 	opacity: 1;
 }
-
+/*
+删除框的边框
+*/
 .actions {
 	position: relative;
 	height: 28px;
-	border-bottom: 1px solid #B6DAFD;
+	border-top: 1px solid #1E90FF;
+	border-left: 2px solid #1E90FF;
+	border-right: 2px solid #1E90FF;
+	border-bottom: 1px solid #1E90FF
 }
 .check-all {
 	float: left;
@@ -65,17 +70,20 @@ ul {
 	padding: 0 0 25px;
 	overflow-x: hidden;
 }
+/*
 .header:before,
 .actions:before,
 li:before,
-.add:before {
+*/
+.actions:before,
+li:before {
 	position: absolute;
 	top: 0;
 	left: 29px;
 	z-index: 10;
 	width: 3px;
 	height: 100%;
-	border: 1px solid #FCCDC7;
+	border: 1px solid #BCEE68;
 	border-width: 0 1px;
 	content: '';
 }
@@ -83,14 +91,24 @@ li:before,
 	top: -25px;
 	height: 25px;
 }
+
 li {
 	position: relative;
 	padding: 6px 50px 7px 45px;
-	border-top: 1px solid #B8DAFC;
-	border-bottom: 1px solid #B8DAFC;
+    
+	border-top: 1px solid #1E90FF;
+	border-bottom: 1px solid #1E90FF;
+	border-right: 2px solid #1E90FF;
+	border-left: 2px solid #1E90FF;
+	/*
+	设置无序表的边框
+	
+	border:1px solid #B8DAFC;
+	*/
 	margin-top: -1px;
 	list-style: none;
 }
+
 li:hover {
 	background: #F4FAFF;
 }
