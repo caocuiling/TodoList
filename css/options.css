@@ -4,7 +4,7 @@
 }
 body {
 	padding: 50px 0;
-	background: #767789 url(../i/bg.jpg) no-repeat 50% 0 fixed;
+	/*background: #767789 url(../i/bg.jpg) no-repeat 50% 0 fixed;*/
 	font: 16px/22px Helvetica, Arial, sans-serif;
 	color: #333;
 }
@@ -15,19 +15,22 @@ a:hover {
 	text-decoration: none;
 }
 .wrapper {
-	width: 680px;
+	width: 420px;
 	margin: 0 auto;
 	border-radius: 4px;
 	background: #FFF;
 	box-shadow: 0 2px 12px rgba(0,0,0,.15);
 }
+/*
+设置标题
+*/
 h1,
 .modal__headline {
-	padding: 16px 20px 14px;
-	border-bottom: 4px solid #87C752;
+	padding: 8px 10px 7px;
+	border-bottom: 4px solid #5BB9f0;
 	border-radius: 4px 4px 0 0;
-	background: #97CE68;
-	font-size: 30px;
+	background: #5BB9f0;
+	font-size: 20px;
 	font-weight: normal;
 	line-height: 1;
 	color: #FFF;
@@ -87,8 +90,8 @@ h1,
 .option {
 	position: relative;
 	display: flex;
-	margin: 0 -20px;
-	padding: 20px;
+	margin: 0 -10px;
+	padding: 10px;
 	border-bottom: 1px solid #E1E4F2;
 }
 .option:first-child {
@@ -100,14 +103,15 @@ h1,
 	clear: both;
 }
 .option__title {
-	flex: 0 0 240px;
-	padding: 0 20px 0 0;
-	line-height: 36px;
+	flex: 0 0 140px;
+	padding: 0 10px 0 0;
+	line-height: 26px;
 }
 .option__title > span {
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 20px;
+	font-size: 10px;
 }
 input[type='text'],
 textarea,
@@ -143,7 +147,7 @@ input.color {
 }
 .radios {
 	flex: auto;
-	font-size: 14px;
+	font-size: 10px;
 }
 .radios label {
 	display: block;
@@ -240,7 +244,7 @@ input.color {
 	color: #999;
 }
 .buttons {
-	margin: 20px 0 2px;
+	margin: 10px 0 2px;
 }
 textarea + .buttons {
 	margin: 10px 0 40px;
@@ -253,11 +257,10 @@ textarea + .buttons {
 .button {
 	position: relative;
 	float: left;
-	height: 42px;
-	padding: 0 16px;
-	border-radius: 4px;
-	background: #FF645F;
-	box-shadow: 0 2px #D95B5B;
+	height: 32px;
+	padding: 0 8px;
+	border-radius: 2px;
+	background: #5BB9f0;
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
@@ -267,7 +270,7 @@ textarea + .buttons {
 	float: right;
 }
 .button:hover {
-	background: #FF7875;
+	background: #90E3F0;
 }
 .button:active {
 	top: 1px;
@@ -295,16 +298,18 @@ textarea + .buttons {
 }
 .button div {
 	position: relative;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: bold;
-	line-height: 42px;
+	line-height: 30px;
 }
+/*
+恢复按钮设置
+*/
 .gray-button {
-	background: #AFAFAF;
-	box-shadow: 0 2px #9A9A9A;
+	background: #5BB9f0;
 }
 .gray-button:hover {
-	background: #B9B9B9;
+	background: #90E3F0;
 }
 .gray-button:active {
 	background: #9F9F9F;

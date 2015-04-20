@@ -12,7 +12,8 @@ $(function() {
 		});
 		outputTasks();
 	}, placeHolderTemplate: '<li class="placeholder"></li>' });
-
+  /*设置操作*/
+  
 	$('#options').click(function() {
 		chrome.tabs.create({'url': 'options.html'});
 	});
