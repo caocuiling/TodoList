@@ -2,12 +2,6 @@
 	margin: 0;
 	padding: 0;
 }
-body {
-	padding: 50px 0;
-	/*background: #767789 url(../i/bg.jpg) no-repeat 50% 0 fixed;*/
-	font: 16px/22px Helvetica, Arial, sans-serif;
-	color: #333;
-}
 a {
 	color: #0A80F5;
 }
@@ -192,17 +186,7 @@ input.color {
 	border-radius: 50%;
 	background: #87C752;
 }
-.checkbox {
-	position: relative;
-	-moz-box-sizing: border-box;
-	     box-sizing: border-box;
-	width: 30px;
-	height: 30px;
-	margin: 3px 0 0;
-	border-radius: 4px;
-	border: 2px solid #DBDDDE;
-	cursor: pointer;
-}
+
 .checkbox:after {
 	content: '';
 	position: absolute;
@@ -429,31 +413,7 @@ kdb {
 }
 /* --- end of Color picker --- */
 
-.modal {
-	position: fixed;
-	z-index: 10;
-	left: 50%;
-	visibility: hidden;
-	width: 600px;
-	padding: 20px;
-	border-radius: 2px;
-	background: #FFF;
-	box-shadow: 0 0 70px rgba(0,0,0,.5);
-	-webkit-transition: all .3s;
-	        transition: all .3s;
-	-webkit-transform: scale(1.5);
-	        transform: scale(1.5);
-	opacity: 0;
-
-	-webkit-backface-visibility: hidden;
-	        backface-visibility: hidden;
-}
-.modal.visible {
-	visibility: visible;
-	-webkit-transform: scale(1);
-	        transform: scale(1);
-	opacity: 1;
-}
+.
 #overlay {
 	position: fixed;
 	z-index: 9;

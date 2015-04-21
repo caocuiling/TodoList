@@ -57,9 +57,11 @@ $(function() {
 		$('input.color').minicolors({
 			letterCase: 'uppercase'
 		});
+		/*
 		$('div.checkbox').each(function() {
 			$(this).data( 'val', $(this).data('default') );
 		});
+*/
 		$('#hotkeys [value="0"]').prop('checked', true);
 		$('#context-menu').attr( 'data-val', '0' ).removeClass('checked');
 	}
@@ -92,6 +94,7 @@ $(function() {
 	}
 
 	// checkboxes   Browser's context menu
+	/*
 	$('div.checkbox').click(function() {
 		if ( $(this).is('.checked') ) {
 			$(this).removeClass('checked');
@@ -100,7 +103,7 @@ $(function() {
 			$(this).addClass('checked');
 			$(this).attr('data-val', '1');
 		}
-	});
+	});*/
 
 	//  button save options
 	$('#save').click(function() {
