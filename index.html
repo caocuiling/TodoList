@@ -3,10 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<link href="css/modal.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.dragsort.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
 </head>
 
@@ -14,7 +16,7 @@
 
 <div class="header">
 	个人任务管理器
-	<div id="options" title="设置"></div>
+	<div id="options" title="设置" data-toggle="modal" data-target="#myModal"></div>
 </div>
 
 <div class="actions">
@@ -28,6 +30,27 @@
 	<textarea id="new-task" placeholder="添加新任务" ></textarea>
 	<div id="submit">添加</div>
 </div>
-
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" aria-hidden="true">
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+              系统简介
+            </h4>
+         </div>
+         <div class="modal-body">
+            地震现场建筑物安全鉴定系统功能是辅助专业鉴定人员或受灾群众在地震现场对受震建筑物进行安全鉴定，提供其鉴定结果，对地震应急期被鉴定建筑物能否居住给出评判建议。系统的核心理论是由中国地震局工程力学研究所孙柏涛研究员基于丰富的地震现场经验进行的科学定量化的鉴定方法研究工作。用户可以通过网络免费注册使用本系统，也可以游客身份登录体验系统功能
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">关闭
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 </html>
