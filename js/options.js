@@ -91,7 +91,7 @@ $(function() {
 		});
 	}
 
-	// checkboxes   Browser's context menu
+	// 复选框   浏览器的上下文菜单
 	$('div.checkbox').click(function() {
 		if ( $(this).is('.checked') ) {
 			$(this).removeClass('checked');
@@ -102,14 +102,14 @@ $(function() {
 		}
 	});
 
-	//  button save options
+	//  保存选项
 	$('#save').click(function() {
 		$(this).addClass('active');
 		setTimeout( function() { $('#save').removeClass('active'); }, 800 );
 		updateOptions();
 	});
 
-	// restore default options
+	// 恢复默认设置
 	$('#defaults').click(function() {
 		defaultOptions(defaults = true);
 		$(this).addClass('active');
@@ -118,19 +118,16 @@ $(function() {
 		return false;
 	});
 
-	// tabs
+	// 选项卡
 	$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 		$(this).addClass('active').siblings().removeClass('active')
 			.parents('div.tabs').find('div.tabs__content').eq($(this).index()).show().siblings('div.tabs__content').hide();
 
 		$('#export').val( lStorage() );
 
-		var top = ($(window).height() - $('div.modal').outerHeight()) / 2;
+		var top = ($(window).height() + $('div.modal').outerHeight()) / 2;
 		var left = ($(window).width() - $('div.modal').outerWidth()) / 2;
 		$('div.modal').css({top: (top > 0 ? top : 0)+'px', left: (left > 0 ? left : 0)+'px'});
 	});
-
-	// translation
-
 });
 })(jQuery);
