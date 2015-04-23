@@ -3,30 +3,88 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<link href="css/modal.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/options.css" rel="stylesheet">
 	<script src="js/jquery.min.js"></script>
+	<script src="js/options.js"></script>
 	<script src="js/jquery.dragsort.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.minicolors.min.js"></script>
+
+
 </head>
 
 <body>
 
 <div class="header">
 	个人任务管理器
-	<div id="options" title="设置"></div>
+	<div id="options" title="设置" data-toggle="modal" data-target="#myModal"></div>
 </div>
 
 <div class="actions">
 	<div class="checkbox check-all"></div>
 	<div class="del-completed">删除全部</div>
 </div>
-
 <ul class="tasks"></ul>
-
 <div class="add">
 	<textarea id="new-task" placeholder="添加新任务" ></textarea>
 	<div id="submit">添加</div>
 </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+         <div class="wrapper">
+	<h1>管理器设置<span class="version" id="version"></span></h1>
+	<div class="tabs">
+		<div class="tabs__content  active">
 
+			<div class="option">
+				<div class="option__title"><span >选择字体:</span></div>
+				<input type="text" id="task-css" data-default="字体大小: 13px; 行高: 16px; 字体类型: Helvetica, Arial, sans-serif" />
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span >优先级1 颜色选择:</span></div>
+				<input type="text" class="color" id="color1" data-default="#F04B39" />
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span >优先级2 颜色选择:</span></div>
+				<input type="text" class="color" id="color2" data-default="#FFA600" />
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span >优先级3 颜色选择:</span></div>
+				<input type="text" class="color" id="color3" data-default="#75BE2C" />
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span >键盘快捷键:</span></div>
+				<div class="radios" id="hotkeys">
+
+					<label><input type="radio" name="hotkey" value="0" /><span><kdb>Enter</kdb> – <span >增加, 保存任务</span>;<br /> <kdb style="margin-left: 25px">Ctrl + Enter</kdb> (<kdb>Shift + Enter</kdb>) – <span >换行</span></span></label>
+
+					<label><input type="radio" name="hotkey" value="1" /><span><kdb>Ctrl + Enter</kdb> – <span >增加, 保存任务</span>;<br /> <kdb style="margin-left: 25px">Enter</kdb> (<kdb>Shift + Enter</kdb>) – <span >换行</span></span></label>
+				</div><!-- .radios -->
+			</div><!-- .option -->
+           	<div class="buttons">
+				<div class="button" id="save" ><div >保存选项</div></div>
+				<div class="button  gray-button" id="defaults"><div >恢复默认设置</div></div>
+			</div><!-- .buttons -->
+			<div class="modal-footer">
+			            <button type="button" class="btn btn-default" 
+			               data-dismiss="modal">关闭
+			            </button>
+		</div><!-- .tabs__content -->
+	</div><!-- .tabs -->
+</div><!-- .wrapper -->
+         
+        
+         
+         
+   </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 </html>

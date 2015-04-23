@@ -57,9 +57,11 @@ $(function() {
 		$('input.color').minicolors({
 			letterCase: 'uppercase'
 		});
+		/*
 		$('div.checkbox').each(function() {
 			$(this).data( 'val', $(this).data('default') );
 		});
+*/
 		$('#hotkeys [value="0"]').prop('checked', true);
 		$('#context-menu').attr( 'data-val', '0' ).removeClass('checked');
 	}
@@ -91,7 +93,8 @@ $(function() {
 		});
 	}
 
-	// 复选框   浏览器的上下文菜单
+	// checkboxes   Browser's context menu
+	/*
 	$('div.checkbox').click(function() {
 		if ( $(this).is('.checked') ) {
 			$(this).removeClass('checked');
@@ -100,16 +103,16 @@ $(function() {
 			$(this).addClass('checked');
 			$(this).attr('data-val', '1');
 		}
-	});
+	});*/
 
-	//  保存选项
+	//  button save options
 	$('#save').click(function() {
 		$(this).addClass('active');
 		setTimeout( function() { $('#save').removeClass('active'); }, 800 );
 		updateOptions();
 	});
 
-	// 恢复默认设置
+	// restore default options
 	$('#defaults').click(function() {
 		defaultOptions(defaults = true);
 		$(this).addClass('active');
@@ -118,16 +121,19 @@ $(function() {
 		return false;
 	});
 
-	// 选项卡
+	// tabs
 	$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 		$(this).addClass('active').siblings().removeClass('active')
 			.parents('div.tabs').find('div.tabs__content').eq($(this).index()).show().siblings('div.tabs__content').hide();
 
 		$('#export').val( lStorage() );
 
-		var top = ($(window).height() + $('div.modal').outerHeight()) / 2;
+		var top = ($(window).height() - $('div.modal').outerHeight()) / 2;
 		var left = ($(window).width() - $('div.modal').outerWidth()) / 2;
 		$('div.modal').css({top: (top > 0 ? top : 0)+'px', left: (left > 0 ? left : 0)+'px'});
 	});
+
+	// translation
+
 });
 })(jQuery);

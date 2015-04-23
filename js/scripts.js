@@ -1,5 +1,5 @@
-	/**
-
+	/** 
+	输出任务  
 	*/
 (function($) {
 $(function() {
@@ -12,11 +12,12 @@ $(function() {
 		});
 		outputTasks();
 	}, placeHolderTemplate: '<li class="placeholder"></li>' });
-
+  /*设置操作
+  
 	$('#options').click(function() {
 		chrome.tabs.create({'url': 'options.html'});
 	});
-
+*/
 	var isChrome = false;
 	if (
 		(navigator.userAgent.match(/Chrome/i)) &&
@@ -386,6 +387,11 @@ $(function() {
 			$('div.menu').hide();
 		}
 	});
+
+
+
+	//设置js
+	
 
 });
 })(jQuery);
