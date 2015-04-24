@@ -7,8 +7,7 @@ a:hover {
 }
 .wrapper {
 	width: 420px;
-	margin: 0 auto;
-	border-radius: 4px;
+	margin: 0 0 0 0;
 	background: #FFF;
 	box-shadow: 0 2px 12px rgba(0,0,0,.15);
 }
@@ -35,7 +34,7 @@ h1,
 	font-weight: bold;
 	color: rgba(255,255,255,.7);
 }
-
+/*
 .tabs__caption {
 	border-bottom: 1px solid #E1E4F2;
 	background: #F4F5FB;
@@ -70,6 +69,7 @@ h1,
 	height: 1px;
 	background: #FFF;
 }
+*/
 .tabs__content {
 	display: none;
 	padding: 20px;
@@ -95,14 +95,14 @@ h1,
 }
 .option__title {
 	flex: 0 0 140px;
-	padding: 0 10px 0 0;
-	line-height: 26px;
+	padding: 0 20px 0 0;
+	line-height: 36px;
 }
 .option__title > span {
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 20px;
-	font-size: 10px;
+	font-size: 14px;
 }
 input[type='text'],
 textarea,
@@ -112,8 +112,8 @@ select {
 	border: 2px solid #DBDDDE;
 	border-radius: 4px;
 	outline: none;
-	font: inherit;
-	font-size: 14px;
+	font: 10px;
+	font-size: 12px;
 	color: #777;
 	flex: auto;
 }
@@ -279,7 +279,7 @@ textarea + .buttons {
 }
 .button div {
 	position: relative;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
 	line-height: 30px;
 }
@@ -444,7 +444,7 @@ kdb {
 	display: inline-block;
 	margin: 15px 0 0;
 }
-
+/*
 dl {
 	margin: 0 0 30px;
 }
@@ -517,3 +517,4 @@ dd.fixed:before {
 	top: 18px;
 	right: 20px;
 }
+*/
